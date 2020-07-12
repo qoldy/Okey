@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="@drawable/back"
+            android:onClick="onBackButtonClick"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:textColor="@color/colorRed"
+            android:textAlignment="center"
+            android:text= "Корзина"
+            android:background="#FFFFFF"
+            android:textSize="40sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"
+        android:background="@color/colorGreen" />
+
+
+    <ListView
+        android:id="@+id/pannier_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.55"
+        android:background="@color/colorMint"></ListView>
+
+
+    <TextView
+        android:id="@+id/toPayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:text="К оплате: xx.xx р."
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        android:textSize="20sp"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Заказать на:"
+    android:textAlignment="center"
+    android:textColor="@color/colorRed"
+    android:textSize="20sp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:background="@drawable/add_hour"
+            android:onClick="onPlusHourClick"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:background="@drawable/add_hour"
+            android:onClick="onPlusMinuteClick"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/hourText"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="15:"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/colorRed"/>
+        <TextView
+            android:id="@+id/minuteText"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="30"
+            android:textColor="@color/colorRed"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:background="@drawable/remove_hour"
+            android:onClick="onMinusHourClick"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:background="@drawable/remove_hour"
+            android:onClick="onMinusMinuteClick"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/to_pay_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:background="@color/colorMint"
+        android:text="Оплатить покупку"
+        android:onClick="onToPayButtonClick"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:text="В избранное"
+        android:background="@color/colorBrightMint"
+        android:onClick="onAddToTemplateClick"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@drawable/shop_pressed" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@drawable/template"
+            android:onClick="onTemplatesClick"/>
+
+        <ImageButton
+            android:id="@+id/qr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@drawable/qr" />
+
+        <ImageButton
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@drawable/profile" />
+    </LinearLayout>
+
+</LinearLayout>
